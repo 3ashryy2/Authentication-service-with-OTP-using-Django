@@ -1,7 +1,7 @@
-Django on Docker
+#Django on Docker
 This project provides a template for running Django applications in Docker containers using docker-compose.
 
-Overview
+#Overview
 The project consists of:
 
 A Django app in src/
@@ -10,7 +10,7 @@ docker-compose.yml to run Django, PostgreSQL, and other services
 README with instructions
 The Django app is baked into its own Docker image. PostgreSQL runs in a separate container.
 
-Quickstart
+#Quickstart
 To get started:
 
 Clone this repo
@@ -21,7 +21,7 @@ docker-compose build
 
 
 
-Start the containers:
+#Start the containers:
 
 docker-compose up
 
@@ -31,7 +31,7 @@ The app will be available at http://localhost:8000 by default.
 
 An admin user is automatically created with username admin and password password.
 
-Django App
+#Django App
 The Django project is under src/. It contains:
 
 settings.py - Django settings configured for Docker. Database, staticfiles, allowed hosts, etc are all setup.
@@ -39,7 +39,7 @@ wsgi.py - WSGI app config.
 urls.py - Main URL routes.
 The src/ directory is added to the image as a volume so you can edit locally and changes will apply.
 
-Docker Images
+#Docker Images
 The docker-compose.yml file defines two images:
 
 web - The Django app. Build from Dockerfile.
@@ -63,7 +63,7 @@ Django migrations will be applied automatically on container start.
 
 Static files are collected automatically too.
 
-Container Commands
+#Container Commands
 You can execute commands in the running containers with docker-compose exec:
 
 # Django shell
@@ -80,7 +80,7 @@ docker-compose exec web python manage.py collectstatic
 
 
 
-Deployment
+#Deployment
 The containers can be deployed as-is to any Docker host.
 
 For production, you should:
