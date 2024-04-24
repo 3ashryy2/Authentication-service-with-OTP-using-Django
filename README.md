@@ -1,5 +1,5 @@
 # Django on Docker
-This project provides a template for running Django applications in Docker containers using docker-compose.
+This project provides a template for running Authentication microservice in Django REST framework application in Docker containers using docker-compose.
 
 # Overview
 The project consists of:
